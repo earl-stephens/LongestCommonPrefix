@@ -21,4 +21,20 @@ public class SolutionTest {
 		
 		assertEquals(expected, output);
 	}
+	
+	@Test
+	void testForNoCommonPrefixes() {
+		String[] inputString = {"dog", "racecar", "car"};
+		
+		assertEquals("", solution.longestCommonPrefix(inputString));
+	}
+	
+	@Test
+	void testForMoreInputStrings() {
+		String[] inputString = {"apple", "ape", "apogee", "apologize", "appear"};
+		String output = solution.longestCommonPrefix(inputString);
+		String expected = "ap";
+		
+		assertEquals(expected, output);
+	}
 }
